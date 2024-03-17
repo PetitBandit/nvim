@@ -1,0 +1,1 @@
+{"plugin":{"prefix":"plugin","body":["return {","'${1}', ","opts = {${2}}, ","config = function()","  require(\"${3:name}\").setup()","end","}"]},"keymap + mapping":{"prefix":["keymap","mapping"],"body":"vim.keymap.set(\"${1:n}\", \"${2:keymap}\", \"${3:action}\", {desc = \"${4:desc}\"})"}}
