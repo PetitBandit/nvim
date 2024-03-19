@@ -2,12 +2,14 @@ local function telescope_opt()
 	local actions = require("telescope.actions")
 	return {
 		defaults = {
+			sorting_strategy = "ascending",
 			path_display = { "smart" },
 			layout_strategy = "horizontal",
 			disable_devicons = false,
 			color_devicons = true,
 			prompt_prefix = "  ",
 			selection_caret = " ",
+
 			set_env = { ["COLORTERM"] = "truecolor" },
 			use_less = true,
 			border = {},
@@ -149,10 +151,10 @@ return {
 			end, { desc = "[F]ind VimRC >" })
 
 			vim.keymap.set("n", "<leader>fr", function()
-				builtin.find_files(require("telescope.themes").get_dropdown({
+				builtin.find_files({
 					prompt_title = "< VimRC >",
 					cwd = vim.fn.stdpath("config"),
-				}))
+				})
 			end, { desc = "< [F]ind Vim[R]C Files>" })
 
 			vim.keymap.set("n", "<leader>fd", function()

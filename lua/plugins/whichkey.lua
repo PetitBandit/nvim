@@ -134,7 +134,6 @@ return {
 				o = {
 					name = "options",
 					b = { ":ToggleBackground<cr>", "background" },
-					h = { "hard times" }, -- just a label. don't create any mapping
 					r = { ":set rnu!<cr>", "relative number lines toggle" },
 				},
 				p = { ":Lazy<CR>", "plugins" },
@@ -172,7 +171,6 @@ return {
 				name = "File", -- optional group name
 				h = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
 				-- p = { "<cmd>lua require('plugins.telescope').search_profiles()<CR>", "[F]ind [P]ro maiia"},
-				-- i = { "<cmd>lua require('plugins.telescope').search_proIcons()<CR>", "[F]ind [I]cons maiia" },
 				-- w = { "<cmd>lua require('plugins.telescope').search_terminus()<CR>", "search terminus"},
 				-- f = {"<cmd>lua require('plugins.telescope').git_files()<cr>", "search git files"},
 				F = { "<cmd>lua require('plugins.telescope').find_files()<cr>", "search files" },
@@ -235,6 +233,7 @@ return {
 				o = { "console.log(VISUAL)" },
 			},
 
+			-- v = {},
 			b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "buffer " },
 
 			n = { ":let @/ = ''<cr>", "remove Highlight" },
