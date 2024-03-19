@@ -4,7 +4,6 @@ return {
 		init = function()
 			vim.opt.termguicolors = true
 			local ccc = require("ccc")
-			local mapping = ccc.mapping
 
 			ccc.setup({
 				-- Your preferred settings
@@ -14,6 +13,12 @@ return {
 					lsp = true,
 				},
 			})
+
+			local commands = {
+				{ ":CccPick<cr>", description = "Detect and replaces color under the cursor" },
+				{ ":CccConvert<cr>", description = "Convert color directly" },
+			}
+			require("legendary").commands(commands)
 		end,
 	},
 

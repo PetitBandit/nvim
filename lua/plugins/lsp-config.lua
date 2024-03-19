@@ -12,6 +12,14 @@ return {
 			{ "j-hui/fidget.nvim", opts = {} },
 		},
 		config = function()
+			local commands = {
+				{ ":LspRestart", description = "LSP: Restart" },
+				{ ":LspStart", description = "LSP: Start" },
+				{ ":LspStop", description = "LSP: Stop" },
+				{ ":LspInfo", description = "LSP: Show Info" },
+				{ ":Mason", description = "Show Mason" },
+			}
+			require("legendary").commands(commands)
 			-- Brief Aside: **What is LSP?**
 			--
 			-- LSP is an acronym you've probably heard, but might not understand what it is.

@@ -96,5 +96,11 @@ return {
 				},
 			},
 		})
+		local commands = {
+			{ ":ObsidianQuickSwitch<cr>", description = "Quick Switch not in Obisdian" },
+			{ ":ObsidianSearch<cr>", description = "search in Obisdian" },
+			{ ":ObsidianRename<cr>", description = "rename Obisdian" },
+		}
+		require("legendary").commands(commands)
 	end,
 }
