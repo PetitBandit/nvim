@@ -4,6 +4,7 @@ source $HOME/.config/nouveauvim/settings.vim
 source $HOME/.config/nouveauvim/mapping.vim
 source $HOME/.config/nouveauvim/mac.vim
 source $HOME/.config/nouveauvim/functions/isolatebrackets.vim
+source $HOME/.config/nouveauvim/functions/getmonth.vim
 source $HOME/.config/nouveauvim/functions/openandsearch.vim
 source $HOME/.config/nouveauvim/functions/indentfile.vim
 source $HOME/.config/nouveauvim/functions/consolelog.vim
