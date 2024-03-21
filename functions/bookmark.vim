@@ -1,7 +1,7 @@
 
 function! Bookmark()
   redir >> ~/terminus/index.md
-  echo "- [✗] [".expand("%t")."](" expand("%:p").':'.line('.').")"
+  echo "- [ ] [".expand("%t")."](" expand("%:p").':'.line('.').")"
   echo " "
   redir END
 endfunction
