@@ -4,8 +4,8 @@ return {
 		local function splitjoin_config()
 			local mappings = {
 				{
-					"<leader>e",
-					description = "Toggle split to multiple lines",
+					"<leader>sj",
+					description = "Toggle Split Join",
 				},
 			}
 			require("legendary").keymaps(mappings)
