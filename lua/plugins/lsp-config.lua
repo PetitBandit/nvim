@@ -8,22 +8,39 @@ return {
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 
 			-- Useful status updates for LSP.
-			-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
 			{ "j-hui/fidget.nvim", opts = {} },
 		},
 		config = function()
+			local mapping = {
+				{
+					"<leader>l",
+					":lua require('legendary').find({ itemgroup = 'lsp', select_prompt = 'lsp' })<cr>",
+					desc = "lsp",
+				},
+			}
 			local commands = {
-				{ ":LspRestart", description = "LSP: Restart" },
-				{ ":LspStart", description = "LSP: Start" },
-				{ ":LspStop", description = "LSP: Stop" },
-				{ ":LspInfo", description = "LSP: Show Info" },
-				{ ":Mason", description = "Show Mason" },
+				itemgroup = "lsp",
+				commands = {
+					{ ":LspRestart", description = "LSP: Restart" },
+					{ ":LspStart", description = "LSP: Start" },
+					{ ":LspStop", description = "LSP: Stop" },
+					{ ":LspInfo", description = "LSP: Show Info" },
+					{ ":Mason", description = "Show Mason" },
+					{ ":lua require('telescope.builtin').lsp_definitions,", description = "[G]oto [D]efinition" },
+					{ ":lua require('telescope.builtin').lsp_references,", description = "[G]oto [R]eferences" },
+					{
+						":lua require('telescope.builtin').lsp_implementations,",
+						description = "[G]oto [I]mplementation",
+					},
+					{ ":lua require('telescope.builtin').lsp_type_definitions,", description = "Type [D]efinition" },
+					{ ":lua require('telescope.builtin').lsp_document,", description = "[D]ocument [S]ymbols" },
+					{ ":vim.lsp.buf.rename", description = "[R]e[n]ame" },
+					{ ":vim.lsp.buff.code_action", description = "[C]ode [A]ction" },
+				},
 			}
 			require("legendary").commands(commands)
-			-- Brief Aside: **What is LSP?**
-			--
-			-- LSP is an acronym you've probably heard, but might not understand what it is.
-			--
+			require("legendary").keymaps(mapping)
+
 			-- LSP stands for Language Server Protocol. It's a protocol that helps editors
 			-- and language tooling communicate in a standardized fashion.
 			--
@@ -242,5 +259,14 @@ return {
 			-- or leave it empty to use the default settings
 			-- refer to the configuration section below
 		},
+	},
+	{
+		"dnlhc/glance.nvim",
+		config = function()
+			require("glance").setup({
+				-- your configuration
+			})
+			-- Lua
+		end,
 	},
 }

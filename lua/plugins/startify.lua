@@ -1,7 +1,7 @@
 return {
-  'mhinz/vim-startify',
-    config = function()
-     vim.cmd [[
+	"mhinz/vim-startify",
+	config = function()
+		vim.cmd([[
 
 function! s:gitModified()
     let files = systemlist('git ls-files -m 2>/dev/null')
@@ -32,8 +32,6 @@ let g:startify_bookmarks = [
             \ { 'p': '~/.config/nouveauvim/lua/plugin.lua' },
             \ { 'K': '~/dotfiles/kitty/kitty.conf'},
             \ { 'z': '~/dotfiles/zsh/zshrc'},
-            \ { 'c': '~/dotfiles/nvim/snips/scss.snippets' },
-            \ { 'J': '~/dotfiles/nvim/snips/typescriptreact.snippets' },
             \ ]
             let g:startify_relative_path = 1
 
@@ -53,6 +51,6 @@ let g:startify_custom_header = [
       \]
 
       nnoremap <Leader><Leader> :Startify <CR>
-     ]]
-    end,
+     ]])
+	end,
 }

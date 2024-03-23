@@ -31,6 +31,9 @@ return {
 					":wincmd =",
 				},
 			},
+			keymaps = {
+				{ "<leader>l", description = "Preview markdown", filters = { ft = "obsidian" } },
+			},
 
 			select_prompt = " legendary.nvim ",
 			col_separator_char = "│",
