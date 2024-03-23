@@ -15,8 +15,6 @@ lua require('plugin')
 lua require('utils/highlightOnYank')
 " $HOME/.config/nouveauvim/lua/utils/highlightOnYank.lua
 " TODO: add emmet
-" TODO: add vim-qf quick fix in general or BQF
 " TODO: git blame ?
-" TODO: add folke/trouble ?
 " TODO: add pmizio/typescript-tools.nvim
 " TODO: add nvimtools/none-ls.nvim

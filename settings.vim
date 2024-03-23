@@ -66,7 +66,7 @@
 
 " set spell spelllang=en_us
 set iskeyword+=-                      	" treat dash separated words as a word text object"
-set conceallevel=0                      " So that I can see `` in markdown files
+set conceallevel=2                      " So that I can see `` in markdown files
 set updatetime=250                      " Faster completion
 set timeoutlen=300                      " By default timeoutlen is 1000 ms
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC

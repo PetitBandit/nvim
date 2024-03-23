@@ -73,6 +73,7 @@ return {
 		},
 	},
 	config = function()
+		require("legendary").setup({ extensions = { which_key = { auto_register = true } } })
 		local wk = require("which-key")
 		wk.register({
 			["1"] = { ":BufferGoto 1<CR>", "which_key_ignore" },
@@ -143,13 +144,12 @@ return {
 			-- TODO: clean mappings
 
 			-- -- i = {":e ~/terminus/work/maiia/maiia_notes.md<CR>/## TODO<CR>k:let @/ = ''<cr>o", "today",},
-			-- o = {
-			-- 	name = "Obsidian", -- optional group name
-			-- 	f = { ":so % <cr>", "source file" },
-			-- 	j = { "[S]plit [J]oin" },
-			-- 	s = { 'yiw:%s/"//g<left><left>', "replace word under cursor" },
-			-- 	v = { ":vsplit<cr><C-w><C-w>", "[S]plit [V]ertical" },
-			-- },
+
+			o = {
+				name = "Obsidian", -- optional group name
+				o = { ":ObsidianSearch<cr>", "search text in obsidian" },
+				f = { ":so % <cr>", "source file" },
+			},
 
 			p = {},
 			a = {},
@@ -191,16 +191,16 @@ return {
 
 			j = {
 				name = "jss", -- optional group name
-				m = { "makestyle ➜ makestyle + theme" },
-				c = { "div ➜ div className=''" },
-				C = { "div ➜ div className={classes." },
-				e = { "class ➜ '& .class'" },
-				l = { "className='X' ➜ className={clsx('X'" },
-				L = { "className={X} ➜ className={clsx(X," },
-				o = { "div ➜ div className={clsx(" },
-				S = { "classes.X ➜ 'X'" },
-				s = { "'X' ➜ classes.X" },
-				t = { "makestyle ➜ makestyle(theme)" },
+				m = { "jss makestyle ➜ makestyle + theme" },
+				c = { "jss div ➜ div className=''" },
+				C = { "jss div ➜ div className={classes." },
+				e = { "jss class ➜ '& .class'" },
+				l = { "jss className='X' ➜ className={clsx('X'" },
+				L = { "jss className={X} ➜ className={clsx(X," },
+				o = { "jss div ➜ div className={clsx(" },
+				S = { "jss classes.X ➜ 'X'" },
+				s = { "jss 'X' ➜ classes.X" },
+				t = { "jss makestyle ➜ makestyle(theme)" },
 				i = {
 					name = "imports", -- optional group name
 					m = { "makestyle" },

@@ -96,11 +96,26 @@ return {
 				},
 			},
 		})
-		local commands = {
-			{ ":ObsidianQuickSwitch<cr>", description = "Quick Switch not in Obisdian" },
-			{ ":ObsidianSearch<cr>", description = "search in Obisdian" },
-			{ ":ObsidianRename<cr>", description = "rename Obisdian" },
+		local mapping = {
+			{
+				"<leader>p",
+				":lua require('legendary').find({ itemgroup = 'Obsidian', select_prompt = 'Obsidian'  })<cr>",
+				desc = "Legendary",
+			},
 		}
-		require("legendary").commands(commands)
+		local commands = {
+			itemgroup = "Obsidian",
+			commands = {
+				{ ":ObsidianQuickSwitch<cr>", description = "Quick Switch not in Obisdian" },
+				{ ":ObsidianSearch<cr>", description = "search in Obisdian" },
+				{ ":ObsidianRename<cr>", description = "rename Obisdian" },
+				{ ":ObsidianTags<cr>", description = "Obisdian Tags" },
+				{ ":ObsidianBacklinks<cr>", description = "Obisdian backlinks" },
+				{ ":ObsidianNew<cr>", description = "Obisdian backlinks" },
+				{ ":ObisdianFollowLink<cr>", description = "Obisdian follow link" },
+			},
+		}
+		require("legendary").commands(commands, mapping)
+		require("legendary").keymaps(mapping)
 	end,
 }

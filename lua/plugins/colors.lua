@@ -15,13 +15,14 @@ return {
 			})
 
 			local commands = {
-				{ ":CccPick<cr>", description = "Detect and replaces color under the cursor" },
+				{ ":CccPick<cr>", description = "pick color under the cursor, [i] to change type" },
 				{ ":CccConvert<cr>", description = "Convert color directly" },
 			}
 			require("legendary").commands(commands)
 		end,
 	},
-
+	-- brenoprata10/nvim-highlight-colors other color highlight plugin w/ different
+	-- options
 	{
 		"RRethy/base16-nvim",
 		config = function()
