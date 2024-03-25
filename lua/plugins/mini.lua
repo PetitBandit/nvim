@@ -20,6 +20,7 @@ return {
 			options = { permanent_delete = false },
 		})
 		require("mini.pairs").setup()
+		require("mini.bufremove").setup()
 		-- TODO: have a look at that when having the brainspace
 		-- require("mini.visits").setup()
 		require("mini.indentscope").setup({

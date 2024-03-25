@@ -5,7 +5,7 @@ nnoremap [<space> msO`s
 nnoremap ]<space> mso`s
 nnoremap [p Op
 nnoremap ]p op
-nnoremap <C-q> :bd<cr>
+nnoremap <C-q> :lua MiniBufremove.delete()<cr>
 "--------------------------------------------------------------------------
 " # Free easy mappings available
 "--------------------------------------------------------------------------
