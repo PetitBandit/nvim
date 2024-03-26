@@ -1,4 +1,7 @@
 return {
+	{
+		"RRethy/vim-illuminate",
+	},
 	-- init.lua
 	-- {
 	-- WARNING: will require tailwind lsp to work

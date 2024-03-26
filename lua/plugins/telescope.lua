@@ -2,31 +2,29 @@ local function telescope_opt()
 	local actions = require("telescope.actions")
 	return {
 		defaults = {
-			sorting_strategy = "ascending",
-			path_display = { "smart" },
-			layout_strategy = "horizontal",
-			disable_devicons = false,
-			color_devicons = true,
 			prompt_prefix = "  ",
 			selection_caret = " ",
-
+			sorting_strategy = "ascending",
+			path_display = { "smart" },
 			set_env = { ["COLORTERM"] = "truecolor" },
-			use_less = true,
-			border = {},
-			borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
-			-- borderchars = { " ", " ", " ", " ", "╭", "╮", "╯", "╰" },
+			-- layout_strategy = "horizontal",
+			-- disable_devicons = false,
+			-- color_devicons = true,
+			--
+			-- border = {},
+			-- borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
 			layout_config = {
 				horizontal = {
 					prompt_position = "top",
-					preview_width = 0.55,
-					results_width = 0.8,
+					-- preview_width = 0.55,
+					-- results_width = 0.8,
 				},
 				vertical = {
-					mirror = false,
+					-- mirror = false,
 				},
-				width = 0.87,
-				height = 0.80,
-				preview_cutoff = 120,
+				-- width = 0.87,
+				-- height = 0.80,
+				-- preview_cutoff = 120,
 			},
 			mappings = {
 				i = {
@@ -112,9 +110,9 @@ return {
 			-- require("telescope").load_extension("ui-select")
 
 			vim.keymap.set("n", "<leader>/", function()
-				builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+				builtin.current_buffer_fuzzy_find({
 					previewer = false,
-				}))
+				})
 			end, { desc = "[/] Fuzzily search in current buffer" })
 
 			vim.keymap.set("n", "<leader>fp", function()
@@ -125,6 +123,7 @@ return {
 						preview_width = 0.5,
 						height = 0.99,
 					},
+					path_display = { "smart" },
 					cwd = "~/work/doca/maiia-frontend/packages/pro-frontend/",
 					file_ignore_patterns = { "index.ts", "index.stories.js" },
 					wrap_results = true,
@@ -144,10 +143,10 @@ return {
 			end, { desc = "Files" })
 
 			vim.keymap.set("n", "<leader>fR", function()
-				builtin.live_grep(require("telescope.themes").get_dropdown({
+				builtin.live_grep({
 					prompt_title = "< VimRC >",
 					cwd = vim.fn.stdpath("config"),
-				}))
+				})
 			end, { desc = "[F]ind VimRC >" })
 
 			vim.keymap.set("n", "<leader>fr", function()
@@ -158,13 +157,13 @@ return {
 			end, { desc = "< [F]ind Vim[R]C Files>" })
 
 			vim.keymap.set("n", "<leader>fd", function()
-				builtin.help_tags(require("telescope.themes").get_dropdown({
+				builtin.help_tags({
 					prompt_title = "< Documentation >",
-				}))
+				})
 			end, { desc = "< help >" })
 
 			vim.keymap.set("n", "<leader>fw", function()
-				builtin.find_files(require("telescope.themes").get_ivy({
+				builtin.find_files({
 					previewer = true,
 					layout_config = {
 						preview_width = 0.5,
@@ -172,7 +171,7 @@ return {
 					},
 					cwd = "~/terminus",
 					prompt_title = "< [F]iles [W]iki >",
-				}))
+				})
 			end, { desc = "< [F]iles [W]iki >" })
 
 			vim.keymap.set("n", "\\", function()
@@ -183,7 +182,7 @@ return {
 			end, { desc = "[S]earch [/] in Open Files" })
 
 			vim.keymap.set("n", "<leader>wf", function()
-				builtin.live_grep(require("telescope.themes").get_ivy({
+				builtin.live_grep({
 					prompt_title = "< [W]iki [F]ind Text>",
 					previewer = true,
 					layout_config = {
@@ -191,13 +190,17 @@ return {
 						height = 0.99,
 					},
 					cwd = "~/terminus",
-				}))
+				})
 			end, { desc = "< [W]iki [F]ind >" })
 
 			vim.keymap.set("n", "<leader>yc", function()
 				builtin.colorscheme(require("telescope.themes").get_ivy({
 					prompt_title = "< colorScheme >",
 					enable_preview = 1,
+					layout_config = {
+						preview_width = 0.5,
+						height = 0.99,
+					},
 				}))
 			end, { desc = "ColorScheme" })
 		end,
