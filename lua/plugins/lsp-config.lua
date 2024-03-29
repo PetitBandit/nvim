@@ -2,6 +2,17 @@ return {
 	{ -- LSP Configuration & Plugins
 		"neovim/nvim-lspconfig",
 		dependencies = {
+			{
+				"SmiteshP/nvim-navbuddy",
+				dependencies = {
+					"SmiteshP/nvim-navic",
+					"MunifTanjim/nui.nvim",
+				},
+				opts = { lsp = { auto_attach = true } },
+				keys = {
+					{ "<leader>e", ":Navbuddy<cr>", desc = "Navbuddy" },
+				},
+			},
 			-- Automatically install LSPs and related tools to stdpath for neovim
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
