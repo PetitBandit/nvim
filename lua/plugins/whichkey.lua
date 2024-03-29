@@ -80,12 +80,15 @@ return {
 			["2"] = { ":BufferGoto 2<CR>", "which_key_ignore" },
 			["3"] = { ":BufferGoto 3<CR>", "which_key_ignore" },
 			["4"] = { ":BufferGoto 4<CR>", "which_key_ignore" },
+			["8"] = { "*", "search word under cursor" },
 			["9"] = { "<Cmd>BufferPick<CR>", "which_key_ignore" },
 			["0"] = { "<C-^>", "last tab" },
 			["-"] = { ":BufferPrevious<CR>", "bprev" },
 			["="] = { ":BufferNext<CR>", "bnext" },
 			[","] = { "<esc>A,<esc>", "add ," },
 			[";"] = { "<esc>A;<esc>", "add ;" },
+			["]"] = { "TDB", "TDB" },
+			["["] = { "TDB", "TDB" },
 
 			q = {
 				name = "quickfix list", -- optional group name
@@ -236,7 +239,10 @@ return {
 			-- v = {},
 			b = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "buffer " },
 
-			n = { ":let @/ = ''<cr>", "remove Highlight" },
+			-- this one leaves the search in the search register, the let @/
+			-- doesnt
+			-- n = { ":let @/ = ''<cr>", "remove Highlight" },
+			n = { ":noh<cr>", "remove Highlight" },
 
 			m = { "add mark" },
 			M = { "<cmd>lua require('telescope.builtin').marks()<cr>", "marks" },

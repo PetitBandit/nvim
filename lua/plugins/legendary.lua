@@ -15,7 +15,7 @@ return {
 				{ ":Maxchar", description = "cuts the line if it makes more than 80char" },
 			},
 			extensions = {
-				lazy_nvim = false,
+				lazy_nvim = true,
 				which_key = {
 					auto_register = true,
 					use_groups = false,

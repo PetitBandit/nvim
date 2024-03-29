@@ -98,12 +98,8 @@ inoremap jk <Esc>
         nnoremap <Left> <C-W><
       nnoremap <Right> <C-W>>
 
-"--------------------------------------------------------------------------
-" # LSP
-"--------------------------------------------------------------------------
 
 
-" cf telescope.vim
 
 "--------------------------------------------------------------------------
 " # Cut, Manipulate text
@@ -175,12 +171,11 @@ inoremap jk <Esc>
     xnoremap <leader>lD :'<,'> %sort! u<cr>
     xnoremap <leader>lS :'<,'> %sort! <cr>
     xnoremap <leader>co yoconsole.log(pA);
-" Tue Mar 28 23:02:27 2023
-" :echo strftime("%c")		   Sun Apr 27 11:49:23 1997
-" :echo strftime("%Y %b %d %X")	   1997 Apr 27 11:53:25
-" :echo strftime("%y%m%d %T")	   970427 11:53:55
-" :echo strftime("%H:%M")	   11:55
     nnoremap <leader>u o<C-R>=strftime("%c")<CR><Esc>0wdwwhpwdWI### <Esc>mto
 
     nnoremap <C--> <Plug>VimwikiMakeDiaryNote
     " i = {":e ~/Library/Mobile Documents/Icloud~md~obsidian/Documents/terminus/work/maiia/maiia_notes.md<CR>/## TODO<CR>k:let @/ = ''<cr>o", "today"},
+" :echo strftime("%c")		   Sun Apr 28 11:49:23 1997
+" :echo strftime("%Y %b %d %X")	   1997 Apr 27 11:53:25
+" :echo strftime("%y%m%d %T")	   970427 11:53:55
+" :echo strftime("%H:%M")	   11:55

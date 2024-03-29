@@ -34,7 +34,9 @@ return {
 				incremental_selection = {
 					enable = true,
 					keymaps = {
-						init_selection = "gnn",
+						-- FIX:check those keymaps
+
+						-- init_selection = "gnn",
 						node_incremental = "grn",
 						scope_incremental = "+",
 						node_decremental = "grm",

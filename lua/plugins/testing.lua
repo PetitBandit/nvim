@@ -1,7 +1,27 @@
 return {
-	{
-		"RRethy/vim-illuminate",
-	},
+	-- {
+	-- 	"utilyre/barbecue.nvim",
+	-- 	name = "barbecue",
+	-- 	version = "*",
+	-- 	dependencies = {
+	-- 		"SmiteshP/nvim-navic",
+	-- 		"nvim-tree/nvim-web-devicons", -- optional dependency
+	-- 	},
+	-- 	opts = {
+	-- 		-- configurations go here
+	-- 	},
+	-- },
+	-- Lua
+	-- {
+	-- 	"ahmedkhalf/project.nvim",
+	-- 	config = function()
+	-- 		require("project_nvim").setup({
+	-- 			-- your configuration comes here
+	-- 			-- or leave it empty to use the default settings
+	-- 			-- refer to the configuration section below
+	-- 		})
+	-- 	end,
+	-- },
 	-- init.lua
 	-- {
 	-- WARNING: will require tailwind lsp to work

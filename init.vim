@@ -18,3 +18,9 @@ lua require('utils/highlightOnYank')
 " TODO: git blame ?
 " TODO: add pmizio/typescript-tools.nvim
 " TODO: add nvimtools/none-ls.nvim
+"
+" base16-catppuccin-macchiato
+" base16-eighties
+" base16-everforest
+" base16-gruvbox-material-dark-medium
+" base16-woodland
