@@ -21,6 +21,9 @@ return {
 		})
 		require("mini.pairs").setup()
 		require("mini.bufremove").setup()
+		require("mini.cursorword").setup({
+			delay = 1000,
+		})
 		-- TODO: have a look at that when having the brainspace
 		-- require("mini.visits").setup()
 		require("mini.indentscope").setup({

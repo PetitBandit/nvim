@@ -90,11 +90,11 @@ local function telescope_opt()
 		},
 	}
 end
-
 return {
 	{
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
+			{ "ahmedkhalf/project.nvim" },
 			{ "nvim-lua/plenary.nvim" },
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
@@ -103,10 +103,19 @@ return {
 			-- { 'nvim-telescope/telescope-fzy-native.nvim' }
 		},
 		opts = {},
+		keys = {
+			{ "<leader>p", ":Telescope projects<cr>", desc = "Projects Search" },
+		},
 		config = function()
 			require("telescope").setup(telescope_opt())
+			require("project_nvim").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
 			local builtin = require("telescope.builtin")
 			require("telescope").load_extension("fzf")
+			require("telescope").load_extension("projects")
 			-- require("telescope").load_extension("ui-select")
 
 			vim.keymap.set("n", "<leader>/", function()
