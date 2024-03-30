@@ -125,7 +125,7 @@ return {
 					h = { "OHACK:<Plug>(comment_toggle_linewise_current)<cr>kA", "create Hack" },
 					w = { "OWARNING:<Plug>(comment_toggle_linewise_current)<cr>kA", "create Warning" },
 				},
-				t = { ":Telescope live_grep<cr>", "Find Text" },
+				t = { ":lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", "Find Text" },
 				T = { ":call OpenAndSearchPoEditor()<CR> ", "Poeditor" },
 				w = { ":Telescope grep_string<cr>", "Find word under cursor" },
 			},

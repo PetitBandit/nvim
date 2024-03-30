@@ -1,5 +1,6 @@
 local function telescope_opt()
 	local actions = require("telescope.actions")
+	local lga_actions = require("telescope-live-grep-args.actions")
 	return {
 		defaults = {
 			prompt_prefix = "  ",
@@ -48,6 +49,16 @@ local function telescope_opt()
 		},
 
 		extensions = {
+			live_grep_args = {
+				auto_quoting = true, -- enable/disable auto-quoting
+				-- define mappings, e.g.
+				mappings = { -- extend mappings
+					i = {
+						["<C-'>"] = lga_actions.quote_prompt(),
+						["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+					},
+				},
+			},
 			fzf = {
 				fuzzy = true, -- false will only do exact matching
 				override_generic_sorter = true, -- override the generic sorter
@@ -96,6 +107,7 @@ return {
 		dependencies = {
 			{ "ahmedkhalf/project.nvim" },
 			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-telescope/telescope-live-grep-args.nvim" },
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
 				build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
@@ -115,6 +127,7 @@ return {
 			})
 			local builtin = require("telescope.builtin")
 			require("telescope").load_extension("fzf")
+			require("telescope").load_extension("live_grep_args")
 			require("telescope").load_extension("projects")
 			-- require("telescope").load_extension("ui-select")
 

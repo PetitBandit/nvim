@@ -3,7 +3,7 @@ return {
 		"junegunn/limelight.vim",
 		keys = {
 			{ "z", mode = "v", "<Plug>(Limelight)", desc = "visual limelight" },
-			{ "<leader>z", ":Limelight0.8<cr>", desc = "limelight" },
+			{ "<leader>z", ":ZenMode<cr>", desc = "limelight" },
 		},
 		lazy = false,
 	},
