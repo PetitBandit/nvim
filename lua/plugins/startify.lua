@@ -32,6 +32,7 @@ let g:startify_bookmarks = [
             \ { 'p': '~/.config/nouveauvim/lua/plugin.lua' },
             \ { 'K': '~/dotfiles/kitty/kitty.conf'},
             \ { 'z': '~/dotfiles/zsh/zshrc'},
+            \ { 'e': '~/Library/Application Support/espanso/match/base.yml'},
             \ ]
             let g:startify_relative_path = 1
 

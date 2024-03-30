@@ -2,15 +2,15 @@ return {
 	{
 		"junegunn/limelight.vim",
 		keys = {
-			{ "z", mode = "v", "<Plug>(Limelight)", desc = "visual limelight" },
-			{ "<leader>z", ":ZenMode<cr>", desc = "limelight" },
+			{ "z", mode = "v", ":'<,'>Limelight0.9<cr>", desc = "visual limelight" },
+			{ "<leader>z", ":ZenMode<cr>", desc = "Zenmode" },
+			{ "<leader>Z", ":Limelight0.9<cr>", desc = "limelight paragraph" },
 		},
 		lazy = false,
 	},
 	{
 		"folke/zen-mode.nvim",
 		dependencies = { "junegunn/limelight.vim" },
-		opt = {},
 		config = function()
 			require("zen-mode").setup({
 				window = {
@@ -51,12 +51,12 @@ return {
 					-- - listen_on unix:/tmp/kitty
 					kitty = {
 						enabled = true,
-						font = "+10", -- font size increment
+						font = "+4", -- font size increment
 					},
 				},
 				-- callback where you can add custom code when the Zen window opens
 				on_open = function(win)
-					vim.cmd("Limelight!!")
+					vim.cmd("Limelight0.9")
 					-- vim.cmd.colorscheme("melange")
 				end,
 				-- callback where you can add custom code when the Zen window closes
