@@ -1,4 +1,5 @@
 return {
+
 	"folke/which-key.nvim",
 	event = "VeryLazy",
 	init = function()
@@ -83,8 +84,8 @@ return {
 			["8"] = { "*", "search word under cursor" },
 			["9"] = { "<Cmd>BufferPick<CR>", "which_key_ignore" },
 			["0"] = { "<C-^>", "last tab" },
-			["-"] = { ":BufferPrevious<CR>", "bprev" },
-			["="] = { ":BufferNext<CR>", "bnext" },
+			["-"] = { ":bprev<CR>", "bprev" },
+			["="] = { ":bnext<CR>", "bnext" },
 			[","] = { "<esc>A,<esc>", "add ," },
 			[";"] = { "<esc>A;<esc>", "add ;" },
 			["]"] = { "TDB", "TDB" },
@@ -147,6 +148,7 @@ return {
 			-- TODO: clean mappings
 
 			-- -- i = {":e ~/terminus/work/maiia/maiia_notes.md<CR>/## TODO<CR>k:let @/ = ''<cr>o", "today",},
+			i = { 'o<C-R>=expand("%:t:r")<cr>.nvimdiW:Lazy reload " <cr>dd', "source file" },
 
 			o = {
 				name = "Obsidian", -- optional group name
@@ -154,7 +156,6 @@ return {
 				f = { ":so % <cr>", "source file" },
 			},
 
-			p = {},
 			a = {},
 			s = {
 				name = "Substitute or source", -- optional group name

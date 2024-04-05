@@ -31,17 +31,6 @@ return {
 				auto_install = true,
 				ignore_install = {},
 				highlight = { enable = true },
-				incremental_selection = {
-					enable = true,
-					keymaps = {
-						-- FIX:check those keymaps
-
-						-- init_selection = "gnn",
-						node_incremental = "grn",
-						scope_incremental = "+",
-						node_decremental = "grm",
-					},
-				},
 
 				autotag = {
 					enable = true,
