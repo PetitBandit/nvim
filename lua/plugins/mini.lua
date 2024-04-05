@@ -18,8 +18,33 @@ return {
 		require("mini.ai").setup({ n_lines = 500 })
 		require("mini.files").setup({
 			options = { permanent_delete = false },
+			mappings = {
+				close = "q",
+				go_in = "l",
+				go_in_plus = "<cr>",
+				go_out = "h",
+				go_out_plus = "H",
+				reset = "<BS>",
+				reveal_cwd = "@",
+				show_help = "?",
+				synchronize = "=",
+				trim_left = "<",
+				trim_right = ">",
+			},
+			-- Customization of explorer windows
+			windows = {
+				-- Maximum number of windows to show side by side
+				max_number = math.huge,
+				-- Whether to show preview of file/directory under cursor
+				preview = true,
+				-- Width of focused window
+				width_focus = 50,
+				-- Width of non-focused window
+				width_nofocus = 15,
+				-- Width of preview window
+				width_preview = 50,
+			},
 		})
-		require("mini.pairs").setup()
 		require("mini.bufremove").setup()
 		require("mini.cursorword").setup({
 			delay = 1000,

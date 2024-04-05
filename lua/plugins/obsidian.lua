@@ -98,7 +98,7 @@ return {
 		})
 		local mapping = {
 			{
-				"<leader>oo",
+				"<leader>O",
 				":lua require('legendary').find({ itemgroup = 'Obsidian', select_prompt = 'Obsidian'  })<cr>",
 				desc = "Legendary",
 			},
