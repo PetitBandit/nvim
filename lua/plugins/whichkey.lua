@@ -152,8 +152,9 @@ return {
 
 			o = {
 				name = "Obsidian", -- optional group name
-				o = { ":ObsidianSearch<cr>", "search text in obsidian" },
+				b = { ":ObsidianSearch<cr>", "search text in obsidian" },
 				f = { ":so % <cr>", "source file" },
+				o = { ":IsolateBracket<cr>", "source file" },
 			},
 
 			a = {},
@@ -186,7 +187,6 @@ return {
 				t = { ":call OpenAndSearch()<CR> ", "Theme" },
 				b = { " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches" },
 				B = { ":GitBlameToggle<CR>", "doc blame" },
-				c = { ":Git blame<CR>", "full doc blame" },
 				r = { "Lsp Ref" }, -- telescope.vim
 				g = { "LazyGit" },
 			},

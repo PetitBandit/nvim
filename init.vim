@@ -15,7 +15,6 @@ lua require('plugin')
 lua require('utils/highlightOnYank')
 " $HOME/.config/nouveauvim/lua/utils/highlightOnYank.lua
 " TODO: add emmet
-" TODO: git blame ?
 " TODO: akinsho/git-conflict.nvim for merge conflict ?
 " TODO: add pmizio/typescript-tools.nvim
 " TODO: add nvimtools/none-ls.nvim
