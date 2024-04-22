@@ -31,6 +31,8 @@ return {
 					ys = true,
 					ds = true,
 					cs = true,
+					gc = true,
+					q = true,
 				},
 			},
 			-- add operators that will trigger motion and text object completion
@@ -185,8 +187,8 @@ return {
 			g = {
 				name = "GIT & Go", -- optional group name
 				t = { ":call OpenAndSearch()<CR> ", "Theme" },
-				b = { " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches" },
-				B = { ":GitBlameToggle<CR>", "doc blame" },
+				B = { " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches" },
+				b = { ":GitBlameToggle<CR>", "doc blame" },
 				r = { "Lsp Ref" }, -- telescope.vim
 				g = { "LazyGit" },
 			},

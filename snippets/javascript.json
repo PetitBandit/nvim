@@ -1,1 +1,1 @@
-{"flexcenter":{"body":["display: 'flex',","justifyContent: 'center', ","alignItems: 'center',"],"prefix":"flexcenter"},";useState":{"body":"const [ $1, set$1] = React.useState([]);","prefix":";useState"}}
+{"flexcenter":{"prefix":"flexcenter","body":["display: 'flex',","justifyContent: 'center', ","alignItems: 'center',"]},"attribute":{"body":["'& [gridkey=\"$1\"]': { ","  gridArea: '$1',","},"],"prefix":"attribute"},";useState":{"prefix":";useState","body":"const [ $1, set$1] = React.useState([]);"}}

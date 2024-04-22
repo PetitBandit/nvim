@@ -1,6 +1,20 @@
 return {
 	{ "sindrets/diffview.nvim" },
-	{ "f-person/git-blame.nvim" },
+	{
+		"f-person/git-blame.nvim",
+		config = function()
+			require("gitblame").setup({
+				--Note how the `gitblame_` prefix is omitted in `setup`
+				enabled = false,
+			})
+			vim.cmd([[
+            " let g:gitblame_message_template = '<author> • <summary> • <date>'
+            let g:gitblame_message_template = '<author> | <summary> | <date>'
+            let g:gitblame_date_format = '%r'
+            let g:gitblame_delay = 0
+        ]])
+		end,
+	},
 	{
 		"akinsho/toggleterm.nvim",
 		version = "*",
