@@ -12,6 +12,7 @@ nnoremap <C-q> :lua MiniBufremove.delete()<cr>
 "Ctrl + b
 "Ctrl + e
       " nnoremap <C-j> g,
+      " nnoremap <C-f> :Lines<cr>
       " nnoremap <C-k> g;
       " nnoremap <C-l> :cnext<cr>
       " nnoremap <C-h> :cp<cr>
@@ -63,8 +64,6 @@ inoremap jk <Esc>
 
       nnoremap <silent> <C-S> :w<cr>
 
-      "Indent file and keep cursor position
-      nnoremap <C-f> :Lines<cr>
 
 
 "--------------------------------------------------------------------------
@@ -172,6 +171,7 @@ inoremap jk <Esc>
     xnoremap <leader>lS :'<,'> %sort! <cr>
     xnoremap <leader>co yoconsole.log(pA);
     nnoremap <leader>u o<C-R>=strftime("%c")<CR><Esc>0wdwwhpwdWI### <Esc>mto
+    vnoremap <leader><space> :g/^$/d<CR><Esc>
 
     nnoremap <C--> <Plug>VimwikiMakeDiaryNote
     " i = {":e ~/Library/Mobile Documents/Icloud~md~obsidian/Documents/terminus/work/maiia/maiia_notes.md<CR>/## TODO<CR>k:let @/ = ''<cr>o", "today"},

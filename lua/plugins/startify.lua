@@ -29,7 +29,6 @@ let g:startify_bookmarks = [
             \ { ',': '~/.config/nouveauvim/lua/plugins/startify.lua' },
             \ { 'm': '~/.config/nouveauvim/mapping.vim' },
             \ { 'w': '~/.config/nouveauvim/lua/plugins/whichkey.lua' },
-            \ { 'p': '~/.config/nouveauvim/lua/plugin.lua' },
             \ { 'K': '~/dotfiles/kitty/kitty.conf'},
             \ { 'z': '~/dotfiles/zsh/zshrc'},
             \ { 'e': '~/Library/Application Support/espanso/match/base.yml'},
@@ -37,6 +36,7 @@ let g:startify_bookmarks = [
             let g:startify_relative_path = 1
 
 " The ASCII art read " الْعِلْمُ قَبْلَ الْقَوْلِ وَالْعَمَلِ" means "It is essential to know a thing first before saying or acting upon it."
+            " \ { 'p': '~/.config/nouveauvim/lua/plugin.lua' },
 
 let g:startify_custom_header = [
       \'                  ▄ ▄ ',

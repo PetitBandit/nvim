@@ -5,7 +5,6 @@ return {
 		local commands = {
 			{
 				":DevDocs<cr>",
-				-- FIX: implement word under the cursor instead of just the doc
 				description = "opens doc",
 			},
 		}

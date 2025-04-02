@@ -137,20 +137,20 @@ return {
 				})
 			end, { desc = "[/] Fuzzily search in current buffer" })
 
-			vim.keymap.set("n", "<leader>fp", function()
-				builtin.find_files(require("telescope.themes").get_ivy({
-					prompt_title = "< PRO >",
-					previewer = true,
-					layout_config = {
-						preview_width = 0.5,
-						height = 0.99,
-					},
-					path_display = { "smart" },
-					cwd = "~/work/doca/maiia-frontend/packages/pro-frontend/",
-					file_ignore_patterns = { "index.ts", "index.stories.js" },
-					wrap_results = true,
-				}))
-			end, { desc = "Pro files" })
+			-- vim.keymap.set("n", "<leader>fp", function()
+			-- 	builtin.find_files(require("telescope.themes").get_ivy({
+			-- 		prompt_title = "< PRO >",
+			-- 		previewer = true,
+			-- 		layout_config = {
+			-- 			preview_width = 0.5,
+			-- 			height = 0.99,
+			-- 		},
+			-- 		path_display = { "smart" },
+			-- 		cwd = "~/work/doca/maiia-frontend/packages/pro-frontend/",
+			-- 		file_ignore_patterns = { "index.ts", "index.stories.js" },
+			-- 		wrap_results = true,
+			-- 	}))
+			-- end, { desc = "Pro files" })
 
 			vim.keymap.set("n", "<leader>ff", function()
 				builtin.find_files(require("telescope.themes").get_ivy({
@@ -200,6 +200,12 @@ return {
 				builtin.live_grep({
 					grep_open_files = true,
 					prompt_title = "Live Grep in Open Files",
+				})
+			end, { desc = "[S]earch [/] in Open Files" })
+
+			vim.keymap.set("n", "fh", function()
+				builtin.oldfiles({
+					prompt_title = "Find recent files",
 				})
 			end, { desc = "[S]earch [/] in Open Files" })
 

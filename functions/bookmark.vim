@@ -6,3 +6,9 @@ function! Bookmark()
   redir END
 endfunction
 :command! Bookmark :call Bookmark()
+
+function! Trim() range
+    execute a:firstline .. ',' .. a:lastline .. 'g/^$/d'
+endfunction
+xnoremap <leader>n :call Trim()<CR>
+:command! Trim :call Trim()

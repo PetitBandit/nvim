@@ -1,47 +1,5 @@
 return {
 
-	-- {
-	-- 	"akinsho/bufferline.nvim",
-	-- 	version = "*",
-	-- 	dependencies = "nvim-tree/nvim-web-devicons",
-	-- 	config = function()
-	-- 		vim.opt.termguicolors = true
-	-- 		local bufferline = require("bufferline")
-	-- 		local groups = require("bufferline.groups")
-	-- 		bufferline.setup({
-	--
-	-- 			options = {
-	-- 				numbers = "ordinal",
-	-- 				show_buffer_close_icons = false,
-	-- 				show_close_icon = false,
-	-- 				-- separator_style = "slant" | "slope" | "thick" | "thin" | { 'any', 'any' },
-	-- 				separator_style = "thick",
-	-- 				indicator = {
-	-- 					icon = "▎", -- this should be omitted if indicator style is not 'icon'
-	-- 					style = "underline",
-	-- 				},
-	-- 				-- groups = {
-	-- 				-- 	options = {
-	-- 				-- 		toggle_hidden_on_enter = true,
-	-- 				-- 	},
-	-- 				-- 	items = {
-	-- 				-- 		groups.builtin.pinned:with({ icon = "" }),
-	-- 				-- 		groups.builtin.ungrouped,
-	-- 				-- 		name = "Docs",
-	-- 				-- 		highlight = { undercurl = true, sp = "green" },
-	-- 				-- 		auto_close = true, -- whether or not close this group if it doesn't contain the current buffer
-	-- 				-- 		matcher = function(buf)
-	-- 				-- 			-- FIX: how group works, because right now they
-	-- 				-- 			-- dont
-	-- 				-- 			return buf.filename:match("%.md")
-	-- 				-- 		end,
-	-- 				-- 	},
-	-- 				-- },
-	-- 			},
-	-- 		})
-	-- 	end,
-	-- },
-
 	{
 		"romgrk/barbar.nvim",
 		dependencies = {
