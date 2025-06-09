@@ -40,12 +40,12 @@ return {
 		end,
 	},
 
-	-- {
-	-- 	"savq/melange-nvim",
-	-- 	init = function()
-	-- 		vim.cmd.colorscheme("melange")
-	-- 	end,
-	-- },
+	{
+		"savq/melange-nvim",
+		init = function()
+			vim.cmd.colorscheme("melange")
+		end,
+	},
 
 	-- { -- You can easily change to a different colorscheme.
 	-- 	-- Change the name of the colorscheme plugin below, and then

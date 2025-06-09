@@ -6,6 +6,8 @@ nnoremap ]<space> mso`s
 nnoremap [p Op
 nnoremap ]p op
 nnoremap <C-q> :lua MiniBufremove.delete()<cr>
+nnoremap gp `[v`]
+
 "--------------------------------------------------------------------------
 " # Free easy mappings available
 "--------------------------------------------------------------------------
@@ -173,7 +175,6 @@ inoremap jk <Esc>
     nnoremap <leader>u o<C-R>=strftime("%c")<CR><Esc>0wdwwhpwdWI### <Esc>mto
     vnoremap <leader><space> :g/^$/d<CR><Esc>
 
-    nnoremap <C--> <Plug>VimwikiMakeDiaryNote
     " i = {":e ~/Library/Mobile Documents/Icloud~md~obsidian/Documents/terminus/work/maiia/maiia_notes.md<CR>/## TODO<CR>k:let @/ = ''<cr>o", "today"},
 " :echo strftime("%c")		   Sun Apr 28 11:49:23 1997
 " :echo strftime("%Y %b %d %X")	   1997 Apr 27 11:53:25

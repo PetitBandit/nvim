@@ -3,7 +3,9 @@ return {
 		"junegunn/limelight.vim",
 		keys = {
 			{ "z", mode = "v", ":'<,'>Limelight0.9<cr>", desc = "visual limelight" },
+
 			{ "<leader>z", ":ZenMode<cr>", desc = "Zenmode" },
+
 			{ "<leader>Z", ":Limelight0.9<cr>", desc = "limelight paragraph" },
 		},
 		lazy = false,
@@ -25,8 +27,8 @@ return {
 					-- uncomment any of the options below, or add other vim.wo options you want to apply
 					options = {
 						-- signcolumn = "no", -- disable signcolumn
-						number = false, -- disable number column
-						relativenumber = false, -- disable relative numbers
+						-- number = false, -- disable number column
+						-- relativenumber = false, -- disable relative numbers
 						-- cursorline = false, -- disable cursorline
 						-- cursorcolumn = false, -- disable cursor column
 						foldcolumn = "0", -- disable fold column
