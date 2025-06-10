@@ -132,33 +132,9 @@ inoremap jk <Esc>
 "--------------------------------------------------------------------------
 
     " <div> --> <div className="">
-    nmap <leader>jc f>i className=""i
+    nmap <leader>jc f>i class=""i
 
-    " <div> --> <div className={classes.
-    nmap <leader>jC f>i className={classes.}i
 
-    " classes.tomate --> 'tomate'
-    nmap <leader>jS /classesdiwxysiw'ds{
-    "  'tomate' --> classes.tomate
-    nmap <leader>js /classwwyiwda"i{classes.pbds"
-
-    " class --> '& .class'
-    nmap <leader>je ysiw'li& .
-
-    " <div> --> <div className={clsx()}>
-    nmap <leader>jo f>i className={clsx(
-
-     " className='tomate' --> className={clsx('tomate')}
-    nmap <leader>jl f"lcs"{wysiw'ysiW(hiclsxlxf"lli,
-
-     " className={test} --> className={clsx(test, )}
-    nmap <leader>jL f{wi f}i bysiW(iclsxf)i, 
-
-    "changes makestyle --> makestyle(theme ...
-    nnoremap <leader>jt ?useStyles = makewwwC(theme => ({
-
-    "import clsx
-   nnoremap <leader>jic mw?import<cr>oimport clsx from "clsx";`w
 
 
 "--------------------------------------------------------------------------
