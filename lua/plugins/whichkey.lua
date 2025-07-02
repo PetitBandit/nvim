@@ -30,7 +30,6 @@ return {
 		},
 
 		{ "<leader>,", "<esc>A,<esc>", desc = "add ," },
-		{ "<leader>-", ":bprev<CR>", "bprev" },
 
 		{ "<leader>0", "<C-^>", desc = "last tab" },
 		{ "<leader>1", ":BufferGoto 1<CR>", desc = "which_key_ignore" },
@@ -40,7 +39,8 @@ return {
 		{ "<leader>8", "*", desc = "search word under cursor" },
 		{ "<leader>9", "<Cmd>BufferPick<CR>", desc = "which_key_ignore" },
 		{ "<leader>;", "<esc>A;<esc>", desc = "add ;" },
-		{ "<leader>=", ":bnext<CR>", "bnext" },
+		{ "<leader>-", "<Cmd>BufferPrevious<CR>", "bprev" },
+		{ "<leader>=", "<Cmd>BufferNext<CR>", "bnext" },
 
 		{ "<leader>F", ":Telescope resume<CR>", "Telescope repeat" },
 		{ "<leader>K", "<Plug>(devdocs-under-cursor)", "Devdocs" },

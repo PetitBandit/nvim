@@ -13,7 +13,6 @@ source $HOME/.config/nouveauvim/functions/bookmark.vim
 lua require('plugin')
 " $HOME/.config/nouveauvim/lua/plugin.lua
 lua require('utils/highlightOnYank')
-" TODO: add emmet
 " TODO: akinsho/git-conflict.nvim for merge conflict ?
 " TODO: add pmizio/typescript-tools.nvim
 "

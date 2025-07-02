@@ -84,11 +84,11 @@ return {
 			-- :GlobalNote -- by default
 			-- :ProjectsNote
 			-- :FoodNote
-			vim.keymap.set("n", "<leader>dd", function()
-				require("global-note").toggle_note("project_local")
-			end, {
-				desc = "Toggle project note",
-			})
+			-- vim.keymap.set("n", "<leader>dd", function()
+			-- 	require("global-note").toggle_note("project_local")
+			-- end, {
+			-- 	desc = "Toggle project note",
+			-- })
 		end,
 	},
 }
