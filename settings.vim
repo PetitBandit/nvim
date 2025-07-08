@@ -25,7 +25,6 @@
 " " }}}
 "Spaces & Tabs {{{
   set tabstop=4     " 1 indentation level = 4 spaces
-  set shiftwidth=0
   set shiftwidth=2                        " Change the number of space characters inserted for indentation
   set shiftround
   set expandtab                           " Ident using spaces, not tabs

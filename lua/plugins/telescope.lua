@@ -44,7 +44,7 @@ local function telescope_opt()
 		},
 		pickers = {
 			buffers = {
-				sort_lastused = true,
+				-- sort_lastused = true,
 			},
 		},
 
@@ -163,7 +163,6 @@ return {
 					wrap_results = true,
 				}))
 			end, { desc = "Files" })
-
 			vim.keymap.set("n", "<leader>fR", function()
 				builtin.live_grep({
 					prompt_title = "< VimRC >",

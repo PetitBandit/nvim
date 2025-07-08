@@ -182,6 +182,7 @@ return {
 				--    https://github.com/pmizio/typescript-tools.nvim
 				--
 				-- But for many setups, the LSP (`ts_ls`) will work just fine
+				angularls = {},
 				ts_ls = {
 					filetypes = {
 						"javascript",
@@ -267,15 +268,6 @@ return {
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		opts = {},
 	},
-	-- {
-	-- 	"dnlhc/glance.nvim",
-	-- 	config = function()
-	-- 		require("glance").setup({
-	-- 			-- your configuration
-	-- 		})
-	-- 		-- Lua
-	-- 	end,
-	-- },
 	{
 		"utilyre/barbecue.nvim",
 		name = "barbecue",

@@ -42,7 +42,9 @@ return {
 		{ "<leader>-", "<Cmd>BufferPrevious<CR>", "bprev" },
 		{ "<leader>=", "<Cmd>BufferNext<CR>", "bnext" },
 
+		{ "<leader>q", ":BqfToggle<CR>", "quickfix toggle" },
 		{ "<leader>F", ":Telescope resume<CR>", "Telescope repeat" },
+		{ "<leader>fn", "search for current filename" },
 		{ "<leader>K", "<Plug>(devdocs-under-cursor)", "Devdocs" },
 		{ "<leader>M", "<cmd>lua require('telescope.builtin').marks()<cr>", "marks" },
 		{ "<leader>T", ":Telescope<cr>", "Telescope" },

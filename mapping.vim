@@ -1,4 +1,3 @@
-
 nnoremap [d vim.diagnostic.goto_prev<cr>
 nnoremap ]d vim.diagnostic.goto_next<cr>
 nnoremap [<space> msO`s
@@ -6,6 +5,7 @@ nnoremap ]<space> mso`s
 nnoremap [p Op
 nnoremap ]p op
 nnoremap <C-q> :lua MiniBufremove.delete()<cr>
+" Select pasted text
 nnoremap gp `[v`]
 
 "--------------------------------------------------------------------------
@@ -118,12 +118,15 @@ inoremap jk <Esc>
       nnoremap c. /\V<C-r>"<CR>cgn<C-a><Esc>
 
       " replace word under cursor with the filename without the extension
-      map <leader>rf ciw<C-R>=expand("%:t:r")<CR>
+      map <leader>Rf ciw<C-R>=expand("%:t:r")<CR>
 
 
     "add the filename
     imap \fn <C-R>=expand("%:t:r")<CR>
 
+    "search for files that have the current filename
+    " nmap <leader>fn :lua require'telescope.builtin'.find_files({cwd = vim.fn.expand(".")})<cr>
+    nmap <leader>fn :Telescope find_files search_dirs=.<cr>
 
 
 
@@ -134,23 +137,30 @@ inoremap jk <Esc>
     " <div> --> <div className="">
     nmap <leader>jc f>i class=""i
 
+    nmap <leader>jj obackground-color: tomato; //delete me:w<cr>
+
 
 
 
 "--------------------------------------------------------------------------
-" # sort visual
+" # visual
 "--------------------------------------------------------------------------
+    xnoremap <leader>o mwoOgvoo'w
     xnoremap <leader>o mwoOgvoo'w
     xnoremap <leader>` li`gvoi`
 
+"sort
     xnoremap <leader>ls :'<,'> sort <cr>
     xnoremap <leader>ld :'<,'> sort u<cr>
     xnoremap <leader>lD :'<,'> %sort! u<cr>
     xnoremap <leader>lS :'<,'> %sort! <cr>
     xnoremap <leader>co yoconsole.log(pA);
-    nnoremap <leader>u o<C-R>=strftime("%c")<CR><Esc>0wdwwhpwdWI### <Esc>mto
+    nnoremap <leader>u o<C-R>=strftime("%c")<CR><Esc>
     vnoremap <leader><space> :g/^$/d<CR><Esc>
 
+
+    "search terms visually selected
+    xnoremap <leader>t <cmd> Telescope grep_string <CR>
     " i = {":e ~/Library/Mobile Documents/Icloud~md~obsidian/Documents/terminus/work/maiia/maiia_notes.md<CR>/## TODO<CR>k:let @/ = ''<cr>o", "today"},
 " :echo strftime("%c")		   Sun Apr 28 11:49:23 1997
 " :echo strftime("%Y %b %d %X")	   1997 Apr 27 11:53:25
