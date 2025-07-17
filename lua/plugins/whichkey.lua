@@ -49,7 +49,7 @@ return {
 		{ "<leader>M", "<cmd>lua require('telescope.builtin').marks()<cr>", "marks" },
 		{ "<leader>T", ":Telescope<cr>", "Telescope" },
 
-		{ "<leader>b", "<cmd>lua require('telescope.builtin').buffers()<cr>", desc = "buffers" },
+		-- { "<leader>b", "<cmd>lua require('telescope.builtin').buffers()<cr>", desc = "buffers" },
 
 		{ "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", "code actions " },
 		{ "<leader>cC", ":CccPick<CR>", "colorPicker" },
@@ -63,7 +63,7 @@ return {
 
 		{ "<leader>gB", " <cmd>lua require('telescope.builtin').git_branches()<cr>", "branches" },
 		{ "<leader>gb", ":GitBlameToggle<CR>", "doc blame" },
-		{ "<leader>gg", "LazyGit" },
+		{ "<leader>gg", ":lua Snacks.lazygit()<cr>", "LazyGit" },
 		{ "<leader>gr", "Lsp Ref" },
 
 		{ "<leader>m", "add mark" },
@@ -88,7 +88,7 @@ return {
 		{ "<leader>ton", "ONOTE:<Plug>(comment_toggle_linewise_current)<cr>kA", "create Note" },
 		{ "<leader>top", "OPERF:<Plug>(comment_toggle_linewise_current)<cr>kA", "create Perf" },
 		{ "<leader>tow", "OWARNING:<Plug>(comment_toggle_linewise_current)<cr>kA", "create Warning" },
-		{ "<leader>tt", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", "Find Text" },
+		-- { "<leader>tt", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", "Find Text" },
 		{ "<leader>tw", ":Telescope grep_string<cr>", "Find word under cursor" },
 
 		{ "<leader>u", desc = "add day and time" },

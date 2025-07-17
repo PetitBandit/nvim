@@ -28,7 +28,7 @@ return {
 				-- Optional, if you want to change the date format of the default alias of daily notes.
 				alias_format = "%B %-d, %Y",
 				-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-				template = "~/hope/templates/Daily.md",
+				-- template = "~/hope/templates/Daily.md",
 			},
 			-- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
 			completion = {
@@ -98,7 +98,7 @@ return {
 		})
 		local mapping = {
 			{
-				"<leader>O",
+				"<leader>ok",
 				":lua require('legendary').find({ itemgroup = 'Obsidian', select_prompt = 'Obsidian'  })<cr>",
 				desc = "Legendary",
 			},
@@ -111,8 +111,8 @@ return {
 				{ ":ObsidianRename<cr>", description = "rename Obisdian" },
 				{ ":ObsidianTags<cr>", description = "Obisdian Tags" },
 				{ ":ObsidianBacklinks<cr>", description = "Obisdian backlinks" },
-				{ ":ObsidianNew<cr>", description = "Obisdian backlinks" },
-				{ ":ObisdianFollowLink<cr>", description = "Obisdian follow link" },
+				{ ":ObsidianNew<cr>", description = "Obisdian new" },
+				-- { ":ObisdianFollowLink<cr>", description = "Obisdian follow link" },
 			},
 		}
 		require("legendary").commands(commands, mapping)

@@ -131,11 +131,11 @@ return {
 			require("telescope").load_extension("projects")
 			-- require("telescope").load_extension("ui-select")
 
-			vim.keymap.set("n", "<leader>/", function()
-				builtin.current_buffer_fuzzy_find({
-					previewer = false,
-				})
-			end, { desc = "[/] Fuzzily search in current buffer" })
+			-- vim.keymap.set("n", "<leader>/", function()
+			-- 	builtin.current_buffer_fuzzy_find({
+			-- 		previewer = false,
+			-- 	})
+			-- end, { desc = "[/] Fuzzily search in current buffer" })
 
 			-- vim.keymap.set("n", "<leader>fp", function()
 			-- 	builtin.find_files(require("telescope.themes").get_ivy({
@@ -152,61 +152,62 @@ return {
 			-- 	}))
 			-- end, { desc = "Pro files" })
 
-			vim.keymap.set("n", "<leader>ff", function()
-				builtin.find_files(require("telescope.themes").get_ivy({
-					prompt_title = "< Files >",
-					previewer = true,
-					layout_config = {
-						preview_width = 0.5,
-						height = 0.99,
-					},
-					wrap_results = true,
-				}))
-			end, { desc = "Files" })
-			vim.keymap.set("n", "<leader>fR", function()
-				builtin.live_grep({
-					prompt_title = "< VimRC >",
-					cwd = vim.fn.stdpath("config"),
-				})
-			end, { desc = "[F]ind VimRC >" })
+			-- vim.keymap.set("n", "<leader>ff", function()
+			-- 	builtin.find_files(require("telescope.themes").get_ivy({
+			-- 		prompt_title = "< Files >",
+			-- 		previewer = true,
+			-- 		layout_config = {
+			-- 			preview_width = 0.5,
+			-- 			height = 0.99,
+			-- 		},
+			-- 		wrap_results = true,
+			-- 	}))
+			-- end, { desc = "Files" })
 
-			vim.keymap.set("n", "<leader>fr", function()
-				builtin.find_files({
-					prompt_title = "< VimRC >",
-					cwd = vim.fn.stdpath("config"),
-				})
-			end, { desc = "< [F]ind Vim[R]C Files>" })
+			-- vim.keymap.set("n", "<leader>fR", function()
+			-- 	builtin.live_grep({
+			-- 		prompt_title = "< VimRC >",
+			-- 		cwd = vim.fn.stdpath("config"),
+			-- 	})
+			-- end, { desc = "[F]ind VimRC >" })
 
-			vim.keymap.set("n", "<leader>fd", function()
-				builtin.help_tags({
-					prompt_title = "< Documentation >",
-				})
-			end, { desc = "< help >" })
+			-- vim.keymap.set("n", "<leader>fr", function()
+			-- 	builtin.find_files({
+			-- 		prompt_title = "< VimRC >",
+			-- 		cwd = vim.fn.stdpath("config"),
+			-- 	})
+			-- end, { desc = "< [F]ind Vim[R]C Files>" })
 
-			vim.keymap.set("n", "<leader>fw", function()
-				builtin.find_files({
-					previewer = true,
-					layout_config = {
-						preview_width = 0.5,
-						height = 0.99,
-					},
-					cwd = "~/terminus",
-					prompt_title = "< [F]iles [W]iki >",
-				})
-			end, { desc = "< [F]iles [W]iki >" })
+			-- vim.keymap.set("n", "<leader>fd", function()
+			-- 	builtin.help_tags({
+			-- 		prompt_title = "< Documentation >",
+			-- 	})
+			-- end, { desc = "< help >" })
 
-			vim.keymap.set("n", "\\", function()
-				builtin.live_grep({
-					grep_open_files = true,
-					prompt_title = "Live Grep in Open Files",
-				})
-			end, { desc = "[S]earch [/] in Open Files" })
+			-- vim.keymap.set("n", "<leader>fw", function()
+			-- 	builtin.find_files({
+			-- 		previewer = true,
+			-- 		layout_config = {
+			-- 			preview_width = 0.5,
+			-- 			height = 0.99,
+			-- 		},
+			-- 		cwd = "~/terminus",
+			-- 		prompt_title = "< [F]iles [W]iki >",
+			-- 	})
+			-- end, { desc = "< [F]iles [W]iki >" })
 
-			vim.keymap.set("n", "fh", function()
-				builtin.oldfiles({
-					prompt_title = "Find recent files",
-				})
-			end, { desc = "[S]earch [/] in Open Files" })
+			-- vim.keymap.set("n", "\\", function()
+			-- 	builtin.live_grep({
+			-- 		grep_open_files = true,
+			-- 		prompt_title = "Live Grep in Open Files",
+			-- 	})
+			-- end, { desc = "[S]earch [/] in Open Files" })
+
+			-- vim.keymap.set("n", "fh", function()
+			-- 	builtin.oldfiles({
+			-- 		prompt_title = "Find recent files",
+			-- 	})
+			-- end, { desc = "[S]earch [/] in Open Files" })
 
 			vim.keymap.set("n", "<leader>wf", function()
 				builtin.live_grep({
@@ -220,16 +221,18 @@ return {
 				})
 			end, { desc = "< [W]iki [F]ind >" })
 
-			vim.keymap.set("n", "<leader>yc", function()
-				builtin.colorscheme(require("telescope.themes").get_ivy({
-					prompt_title = "< colorScheme >",
-					enable_preview = 1,
-					layout_config = {
-						preview_width = 0.5,
-						height = 0.99,
-					},
-				}))
-			end, { desc = "ColorScheme" })
+			-- vim.keymap.set("n", "<leader>yc", function()
+			-- 	builtin.colorscheme(require("telescope.themes").get_ivy({
+			-- 		prompt_title = "< colorScheme >",
+			-- 		enable_preview = 1,
+			-- 		layout_config = {
+			-- 			preview_width = 0.5,
+			-- 			height = 0.99,
+			-- 		},
+			-- 	}))
+			-- end, { desc = "ColorScheme" })
+
+			require("config.telescope.multigrep").setup()
 		end,
 	},
 }
