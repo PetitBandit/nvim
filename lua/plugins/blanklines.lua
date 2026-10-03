@@ -1,22 +1,21 @@
-return {
-	-- "lukas-reineke/indent-blankline.nvim",
-	-- main = "ibl",
-	-- opts = {},
-	-- config = function()
-	-- 	require("ibl").setup({
-	-- 		scope = { enabled = true },
-	-- 		exclude = {
-	-- 			filetypes = {
-	-- 				"help",
-	-- 				"startify",
-	-- 				"Trouble",
-	-- 				"lazy",
-	-- 				"neo-tree",
-	-- 			},
-	-- 			buftypes = {
-	-- 				"terminal",
-	-- 			},
-	-- 		},
-	-- 	})
-	-- end,
+return { -- Lazy
+	"piersolenski/import.nvim",
+	dependencies = {
+		-- One of the following pickers is required:
+		"nvim-telescope/telescope.nvim",
+		-- 'folke/snacks.nvim',
+		-- 'ibhagwan/fzf-lua',
+	},
+	opts = {
+		picker = "telescope",
+	},
+	keys = {
+		{
+			"<leader>i",
+			function()
+				require("import").pick()
+			end,
+			desc = "Import",
+		},
+	},
 }
